@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
+from rango import views
 
 urlpatterns = [
+	# maps the basic URL to the index view in the rango app
+	url(r'^$', views.index, name='index'),
+	# any URLs starting with rango/
+	# are handled by the rango application
+
+	# the remainderof the URL is passed to rango.url through the use of include function
+	url(r'^rango/', include('rango.urls')),
     url(r'^admin/', admin.site.urls),
 ]
