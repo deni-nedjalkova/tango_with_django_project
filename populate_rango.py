@@ -22,7 +22,7 @@ def populate():
 	 "views":4},
 	{"title":"Learn Python in 10 Minutes",
 	 "url":"http://www.korokithakis.net/tutorials/python/",
-	 "views":5} ]
+	 "views":100} ]
 
 	django_pages = [
 	{"title":"Official Django Tutorial",
